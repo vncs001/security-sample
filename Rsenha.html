@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<header>
+    <nav>
+        <ul>
+            <li><a href="Registo.html">Home</a></li>
+            <li><a href="Forum.php">Forum</a></li>
+        </ul>
+    </nav>
+    <div class="user-info">
+
+    </div>
+</header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="form-container">
+            <div class="form-box">
+                <section id="password-reset-section">
+                    <h2>Redefinir Senha</h2>
+
+                        <div id="RedSenha"></div>
+
+                        <label for="email-NS">E-mail</label>
+                        <input class="inp" type="email" id="email-NS" name="email-NS" title="formato xxxx(...)@xxx(...).xxx podendo conter - _ . antes do @" pattern="^[\w\.-]+@[\w]+\.(com)$"/>
+                    
+                        <label for="old-password">Senha Antiga</label>
+                        <input class="inp" type="password" id="old-password" name="old-password" required>
+
+                        <label for="new-password">Nova Senha</label>
+                        <input class="inp" type="password" id="new-password" name="new-password" required>
+
+                        <label for="confirm-password">Confirmar Nova Senha</label>
+                        <input class="inp" type="password" id="confirm-password" name="confirm-password" required>
+
+                        <button class="btn" id="redefsenha" type="submit">Redefinir Senha</button>
+           
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="scriptRsenha.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<header>
+    <nav>
+        <ul>
+            <li><a href="Registo.html">Home</a></li>
+            <li><a href="Forum.html">Forum</a></li>
+        </ul>
+    </nav>
+    <div class="user-info">
+
+    </div>
+</header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="form-container">
+            <div class="form-box">
+                <section id="password-recovery-section">
+                    <h2>Recuperar Senha</h2>
+                    <p id="enviado"></p>
+                    <form id="password-recovery-form" action="mail.php" method="post">
+                        <label for="email">E-mail</label>
+                        <input class="inp" type="email" id="email" name="email" title="formato xxxx(...)@xxx(...).xxx podendo conter - _ . antes do @" pattern="^[\w\.-]+@[\w]+\.(com)$" required>
+
+                        <button class="btn" type="button" onclick="mailsend()">Enviar</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="scriptsRegistro.js"></script>
+    </footer>
+</body>
+
+</html>

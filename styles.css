@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(255, 165, 0, 0.2); 
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  width: 100%;
+  color: white;
+  padding: 10px 0; 
+  position: fixed; 
+  top: 0; 
+  z-index: 999; 
+}
+
+nav {
+  width: 100%; 
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center; 
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.user-info {
+  margin-right: 20px;
+}
+
+.container {
+  background-color: rgba(255, 165, 0, 0.2); 
+  width: 80%;
+  max-width: 600px; /* Alterado para melhor adaptação ao conteúdo */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 80px auto 20px; 
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px; 
+}
+
+.form-box {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#login-section, #registration-section, #password-recovery-section, #password-reset-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: auto;
+}
+
+form label {
+  margin-bottom: 10px;
+  margin-top: auto;
+  display: block;
+}
+
+form button {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px ;
+}
+
+.inp{
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 7px;
+  width: 100%; /* Adicionado para preencher a largura do container */
+  padding: 10px; /* Adicionado para melhorar a aparência dos inputs */
+}
+
+.btn{
+  cursor:pointer;
+  border: 2px solid white;
+  border-radius: 7px;
+  background-color: #141414;
+  color: white;
+  width: 100%; /* Alterado para preencher a largura do container */
+  padding: 10px; /* Adicionado para melhorar a aparência dos botões */
+}
+
+.btn:hover{
+  cursor:pointer;
+  border: 2px solid white;
+  border-radius: 7px;
+  background-color: #141414;
+  color: white;
+}
+
+/* modal */
+#qrCodeModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  padding: 20px;
+  background: #fff;
+  z-index: 1000;
+}
+
+#modalOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+
+/* Estilos para o modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal-content span {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-content span:hover,
+.modal-content span:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.forum-links {
+  text-align: center;
+}
+
+.forum-links h2 {
+  margin-bottom: 20px;
+}
+
+.forum-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.forum-links ul li {
+  margin-bottom: 10px;
+}
+
+.forum-links ul li a.forum-link-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffa500;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+  transition: background-color 0.3s;
+}
+
+.forum-links ul li a.forum-link-btn:hover {
+  background-color: #ff8c00;
+}
+
+/* Estilo para a caixa do chat */
+.chat-box {
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Estilo para as mensagens */
+.message {
+  margin-bottom: 10px;
+}
+
+/* Estilo para a informação da mensagem */
+.message-info {
+  font-weight: bold;
+  color: #333;
+}
+/* Estilo para a caixa de entrada de mensagens */
+.message-input {
+  width: calc(100% - 22px); /* Largura igual à caixa do chat, descontando a largura da barra de rolagem */
+  height: 50px; /* Altura definida */
+  resize: none; /* Impede redimensionamento */
+  margin-bottom: 10px; /* Margem inferior para separar da próxima mensagem */
+  padding: 5px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda */
+  box-sizing: border-box; /* Faz com que a largura definida inclua padding e borda */
+}
+
+/* Estilo para o botão Enviar */
+button {
+  display: block; /* Botão em bloco */
+  margin: 0 auto; /* Centralizado horizontalmente */
+  width: 150px; /* Largura definida */
+  height: 40px; /* Altura definida */
+  font-size: 16px; /* Tamanho da fonte */
+  color: #fff; /* Cor do texto */
+  background-color: #007bff; /* Cor de fundo */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Borda arredondada */
+  cursor: pointer; /* Cursor ao passar por cima */
+}

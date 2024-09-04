@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autenticação com reCAPTCHA</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <aside>
+    <div id="intro" style="background-color: rgb(93, 179, 179); padding: 20px; color: #ffffff; font-size: 18px;">
+      <h2>Como funciona:</h2>
+      <ul>
+        <li>Comunidade: Somos uma comunidade vibrante e engajada, composta por pessoas que buscam ajuda e oferecem apoio.</li>
+        <li>Tópicos: Explore a variedade de tópicos organizados por temas como ansiedade, depressão, saúde física, entre outros.</li>
+        <li>Postagens: Compartilhe suas dúvidas, experiências e pensamentos em novas postagens ou responda a tópicos existentes.</li>
+        <li>Respostas: Receba apoio, conselhos e informações valiosas da comunidade.</li>
+      </ul>
+      <h2>Navegando com respeito:</h2>
+      <ul>
+        <li>Cordialidade: Seja gentil e respeitoso com todos os membros da comunidade.</li>
+        <li>Empatia: Demonstre compreensão e acolhimento às experiências dos outros.</li>
+        <li>Discrição: Evite compartilhar informações pessoais que possam te colocar em risco ou a outros.</li>
+        <li>Foco no tema: Mantenha as conversas relevantes ao tópico em questão.</li>
+        <li>Linguagem adequada: Use uma linguagem educada e evite termos discriminatórios ou ofensivos.</li>
+      </ul>
+      <h2>Lembre-se:</h2>
+      <ul>
+        <li>O fórum não substitui acompanhamento profissional.</li>
+        <li>Busque ajuda médica e psicológica se necessário.</li>
+        <li>Seja honesto e autêntico em suas interações.</li>
+        <li>Ajude outros compartilhando suas experiências e conhecimentos.</li>
+      </ul>
+      <h2>Sinta-se à vontade para fazer perguntas e compartilhar suas experiências.</h2>
+      <p>Estamos aqui para te ajudar!</p> 
+    </div>
+  </aside>
+
+  <nav>
+    <div id="login-section">
+      <h2>Autenticação</h2>
+      <form action="passw_verify.php" method="post">
+        <label for="smscode">Código SMS</label>
+        <input type="text" id="smscode" name="smscode" required />
+        
+        <div class="g-recaptcha" data-sitekey="6LfYyKUpAAAAAESdbx7Xc0ggPhTbtwoyHPNaYQIu"></div>
+        
+        <button type="submit">Autenticar</button>
+      </form>
+    </div>
+  </nav>
+</body>
+</html>

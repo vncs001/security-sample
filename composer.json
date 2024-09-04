@@ -1,0 +1,7 @@
+{
+    "require": {
+        "sonata-project/google-authenticator": "^2.3",
+        "twilio/sdk": "^8.0",
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
